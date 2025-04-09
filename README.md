@@ -1,6 +1,7 @@
 Project description: Compare the efficacy of to MVPAs in decoding left versus right hand movements. First decoder focuses only on spatial patterns, second decoder also accounts for temporal variation.
 
-Project folders description:\n
+Project folders description:
+
   a. Analyses: contains all analysis scripts
      i.   fullBehavioralAnalysis: contains all behavioral analyses and visualizations of behavioral analyses. Should be run using jupyter notebook (python)
      ii.  will also contain decoder scripts and a script to analyze and compare results of decoders
