@@ -11,7 +11,6 @@ Project folders description:
           1. task segmentation and encoding, ITI, and response/trial segmentation
           2. causal highpass, lowpass, and notch
           3. ICA eye movement cleaning
-          4. Demeaning 
           5. Bad trial removal (no channels removed) 
      ii.  preproc_step1_source_batch.sh: Creates a job on amarel to run initial preprocessing for each subject in parallel. Written in bash. Still drafting.
      iii. Step2_VolumeSourceModeling_bandLCMVbeamform_EGI.m: Source models EGI data using the 264 Power Atlas. Still Drafting.
