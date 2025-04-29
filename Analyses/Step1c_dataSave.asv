@@ -1,0 +1,39 @@
+function dataSave(Subjects)
+%Change how data is saved
+%loop through subjects
+for 
+%load in data
+inputDir = '/cache/home/let83/FND4/results/preproc1_causalFilter/';
+inputFile = fullfile(['sub',num2str(Subjects(subj)),'_preproc_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat']);
+subjDataFile = fullfile([inputDir,inputFile]);
+load(subjDataFile);
+probes = data_preproc_out.probes;
+
+%Name individual files to save
+fsample = probes.fsample;
+elec = probes.elec;
+hdr = probes.hdr;
+sampleinfo = probes.sampleinfo;
+trial = probes.trial;
+time = probes.time;
+label = probes.label;
+cfg = probes.cfg;
+
+%Reorganize trialinfo so it can be read in python
+trialinfo.resp(strcmp(trialinfo.resp, 'k'))={4};
+trialinfo.resp(strcmp(trialinfo.resp, 'j'))={3};
+trialinfo.resp(strcmp(trialinfo.resp, 'f'))={2};
+trialinfo.resp(strcmp(trialinfo.resp, 'd'))={1};
+trialinfo_old = trialinfo;
+trialinfo = trialinfo_old(:, {'TaskCode','acc','resp','rt'});
+
+%List of file names to be saved
+fileNames = {'fsample','elec','hdr','trialinfo','sampleinfo','trial','time','label','cfg'};
+outputDir = fullfile(['/cache/home/let83/FND4/results/preproc1_causalFilter/',num2str(Subjects(subj)),'/']);
+if ~exist(output_dir,'dir')
+    mkdir(output_dir);
+end
+for i=1:length(fileNames)
+    fileSaving = fullfile([fileNames{i} '_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat']);
+    save([outputDir, fileSaving],fileNames{i},'-v7.3');
+end

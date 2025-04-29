@@ -1,0 +1,77 @@
+exception calling callback for <Future at 0x7f9fd1e1afd0 state=finished raised BrokenProcessPool>
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/process_executor.py", line 407, in _process_worker
+    call_item = call_queue.get(block=True, timeout=timeout)
+  File "/usr/lib64/python3.6/multiprocessing/queues.py", line 113, in get
+    return _ForkingPickler.loads(res)
+ModuleNotFoundError: No module named 'Step2a_run_decoders_fxns'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/_base.py", line 625, in _invoke_callbacks
+    callback(self)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 360, in __call__
+    self.parallel.dispatch_next()
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 797, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 864, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 782, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/_parallel_backends.py", line 531, in apply_async
+    future = self._workers.submit(SafeFunction(func))
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/reusable_executor.py", line 178, in submit
+    fn, *args, **kwargs)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/process_executor.py", line 1115, in submit
+    raise self._flags.broken
+joblib.externals.loky.process_executor.BrokenProcessPool: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/process_executor.py", line 407, in _process_worker
+    call_item = call_queue.get(block=True, timeout=timeout)
+  File "/usr/lib64/python3.6/multiprocessing/queues.py", line 113, in get
+    return _ForkingPickler.loads(res)
+ModuleNotFoundError: No module named 'Step2a_run_decoders_fxns'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/let83/FND4/Analyses/subjBatch_runSingleDecoder/2_single_decoder_script.py", line 33, in <module>
+    avg_accuracy, sem_accuracy = Parallel(n_jobs=-1)(delayed(decode_single_timepoint)(classify_cond, subjNum,t, decoderType,decodingAnalysis) for t in range(nTimepoints))
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 1061, in __call__
+    self.retrieve()
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 938, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "/usr/lib64/python3.6/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.6/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/_base.py", line 625, in _invoke_callbacks
+    callback(self)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 360, in __call__
+    self.parallel.dispatch_next()
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 797, in dispatch_next
+    if not self.dispatch_one_batch(self._original_iterator):
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 864, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 782, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/_parallel_backends.py", line 531, in apply_async
+    future = self._workers.submit(SafeFunction(func))
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/reusable_executor.py", line 178, in submit
+    fn, *args, **kwargs)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/process_executor.py", line 1115, in submit
+    raise self._flags.broken
+joblib.externals.loky.process_executor.BrokenProcessPool: A task has failed to un-serialize. Please ensure that the arguments of the function are all picklable.
+
+real	0m4.434s
+user	0m2.658s
+sys	0m2.367s
