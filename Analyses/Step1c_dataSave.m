@@ -1,6 +1,8 @@
-function dataSave(Subjects)
+function Step1c_dataSave(Subjects)
 %Change how data is saved
 %loop through subjects
+%Run all analyses for 5 subjects, and then delete those subjects and run it for the next five
+%Only keep one subject of data (have 1,2,3,5,10)
 for subj=1:length(Subjects)
     %load in data
     inputDir = '/cache/home/let83/FND4/results/preproc1_causalFilter/';
@@ -13,7 +15,7 @@ for subj=1:length(Subjects)
     fsample = probes.fsample;
     elec = probes.elec;
     hdr = probes.hdr;
-    trialinfo = probes.trialinfo;
+    trialinfo_old = probes.trialinfo;
     sampleinfo = probes.sampleinfo;
     trial = probes.trial;
     time = probes.time;
@@ -21,11 +23,10 @@ for subj=1:length(Subjects)
     cfg = probes.cfg;
     
     %Reorganize trialinfo so it can be read in python
-    trialinfo.resp(strcmp(trialinfo.resp, 'k'))={4};
-    trialinfo.resp(strcmp(trialinfo.resp, 'j'))={3};
-    trialinfo.resp(strcmp(trialinfo.resp, 'f'))={2};
-    trialinfo.resp(strcmp(trialinfo.resp, 'd'))={1};
-    trialinfo_old = trialinfo;
+    trialinfo_old.resp(strcmp(trialinfo_old.resp, 'k'))={4};
+    trialinfo_old.resp(strcmp(trialinfo_old.resp, 'j'))={3};
+    trialinfo_old.resp(strcmp(trialinfo_old.resp, 'f'))={2};
+    trialinfo_old.resp(strcmp(trialinfo_old.resp, 'd'))={1};
     trialinfo = trialinfo_old(:, {'TaskCode','acc','resp','rt'});
     
     %List of file names to be saved

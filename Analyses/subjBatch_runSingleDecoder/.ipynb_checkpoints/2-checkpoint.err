@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/2_single_decoder_script.py", line 29, in <module>
+    decoderType = Random_Forest
+NameError: name 'Random_Forest' is not defined
+Traceback (most recent call last):
+  File "/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/2_single_decoder_script.py", line 29, in <module>
+    decoderType = Random_Forest
+NameError: name 'Random_Forest' is not defined
+Traceback (most recent call last):
+  File "/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/2_single_decoder_script.py", line 29, in <module>
+    decoderType = Random_Forest
+NameError: name 'Random_Forest' is not defined
+
+real	0m46.699s
+user	0m1.531s
+sys	0m1.571s
+
+real	0m46.495s
+user	0m1.564s
+sys	0m1.607s
+
+real	0m46.687s
+user	0m1.556s
+sys	0m1.759s

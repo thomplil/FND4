@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/10_single_decoder_script.py", line 60, in <module>
+    plt.savefig(os.path.join(outputDir, outfile))
+NameError: name 'outputDir' is not defined
+
+real	37m47.084s
+user	171m28.488s
+sys	0m56.403s

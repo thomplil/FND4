@@ -1,13 +1,17 @@
 #!/bin/bash
 #SBATCH --partition=price
 #SBATCH --job-name=DecodingSingleAcc_17
-#SBATCH --time=01:00:00
+#SBATCH --time=03:00:00      # Will be increased when running tempGen
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=5
-#SBATCH --mem=60000
-#SBATCH --output=/home/let83/FND4/Analyses/subjBatch_runSingleDecoder/17.out
-#SBATCH --error=/home/let83/FND4/Analyses/subjBatch_runSingleDecoder/17.err
+#SBATCH --cpus-per-task=5    # Number of parallel tasks, adjust as needed for tempGen
+#SBATCH --mem=80000
+#SBATCH --output=/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/17.out
+#SBATCH --error=/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/17.err
 #SBATCH --export=ALL
-source home/let83/eeg_decoding_env/bin/activate
-time python /home/let83/FND4/Analyses/subjBatch_runSingleDecoder/17_single_decoder_script.py
+
+# Activate the virtual environment
+source /home/let83/eeg_decoding_env/bin/activate
+
+# Run the Python script for the subject
+time python /projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/17_single_decoder_script.py

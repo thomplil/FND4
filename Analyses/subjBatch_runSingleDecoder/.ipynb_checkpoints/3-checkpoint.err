@@ -1,0 +1,38 @@
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/process_executor.py", line 436, in _process_worker
+    r = call_item()
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/externals/loky/process_executor.py", line 288, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/_parallel_backends.py", line 595, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 264, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 264, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/projects/f_mc1689_1/cpro2_eeg/docs/scripts/Step3a_run_decoders_fxns_v2.py", line 46, in decode_single_timeseries
+    cond_code, random_data_trl, folds_mat,random_cond_targets = DecodingAcc(classify_cond, decoderType, subjNum, decodingAnalysis)
+TypeError: DecodingAcc() missing 1 required positional argument: 'data_lock'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/3_single_decoder_script.py", line 33, in <module>
+    results = Parallel(n_jobs=-1)(delayed(decode_single_timeseries)(classify_cond, subjNum,t, decoderType,decodingAnalysis) for t in range(nTimepoints))
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 1061, in __call__
+    self.retrieve()
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/parallel.py", line 938, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/home/let83/eeg_decoding_env/lib64/python3.6/site-packages/joblib/_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "/usr/lib64/python3.6/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.6/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+TypeError: DecodingAcc() missing 1 required positional argument: 'data_lock'
+
+real	0m8.889s
+user	0m11.427s
+sys	0m7.904s

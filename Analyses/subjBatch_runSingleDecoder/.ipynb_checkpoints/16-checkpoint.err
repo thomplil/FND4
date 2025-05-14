@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/projects/f_mc1689_1/cpro2_eeg/docs/scripts/subjBatch_runSingleDecoder/16_single_decoder_script.py", line 54, in <module>
+    plt.fill_between(timepoints, avg_accuracy - sem_accuracy, avg_accuracy + sem_accuracy, alpha=0.3, color='lightskyblue')
+TypeError: unsupported operand type(s) for -: 'tuple' and 'tuple'
+
+real	20m29.135s
+user	76m54.982s
+sys	1m10.490s

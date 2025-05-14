@@ -1,0 +1,154 @@
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+starting DecodingAcc
+got through basic naming
+made dir
+named input dir and file
+fsample
+['fsample']
+Error 'Dataset' object has no attribute 'items' occurred for file fsample
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/fsample_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+named input dir and file
+elec
+['#refs#', 'elec']
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/elec_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+named input dir and file
+hdr
+['#refs#', 'hdr']
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/hdr_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+named input dir and file
+trialinfo
+got trialinfo
+['#refs#', '#subsystem#', 'trialinfo']
+Error 'Dataset' object has no attribute 'items' occurred for file trialinfo
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/trialinfo_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+defined trialinfo
+dict_keys(['#refs#', '#subsystem#', 'trialinfo'])
+named input dir and file
+trial
+['#refs#', 'trial']
+Error 'Dataset' object has no attribute 'items' occurred for file trial
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/trial_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+dict_keys(['#refs#', 'trial'])
+named input dir and file
+time
+['#refs#', 'time']
+Error 'Dataset' object has no attribute 'items' occurred for file time
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/time_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+named input dir and file
+label
+['#refs#', 'label']
+Error 'Dataset' object has no attribute 'items' occurred for file label
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/label_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+nChans is 255
+named input dir and file
+cfg
+['#refs#', '#subsystem#', 'cfg']
+Finished loading /projectsn/f_mc1689_1/cpro2_eeg/data/results/preproc1_causalFilter/sub3/cfg_hp0.1notch_seg_autochannelz3_trialz3_ICAz3_baselinelp125avgref.mat
+Loaded Data
+Defined trialinfo
+Logic rule list:
+0      2.0
+1      2.0
+2      2.0
+3      2.0
+4      2.0
+      ... 
+355    2.0
+356    2.0
+357    2.0
+358    2.0
+359    2.0
+Name: LogicRule, Length: 360, dtype: float64
+ERROR could not broadcast input array from shape (2) into shape (494,255) at a,205!!!
+
+Defined trials
+Defined time
+defined data_stim
+defined initial variables
+made it through loop
+updated data_stim time
+full_trls shape: (494, 255, 268)
+dict_keys(['trialinfo', 'time', 'trial'])
+Updated data_input
+494
+plotted stim locked data
+defined cond_targets
+(268, 255, 494)
+255
+Not setting metadata
+Not setting metadata
+268 matching events found
+No baseline correction applied
+0 projection items activated
+0 bad epochs dropped
+data_trl, new shape: (268, 255, 494)
+Randomized cond_target and its indices
+(134, 255, 494)
+randomized trial order within a matrix of trial data
+Completed setup for decoding, defined train and and test folds
+got decoding results
+Ran timeseries decoding for subject 3
+saved graph
+saved data
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
+got through first functions
+impored h5py etc
+imported mne
+imported random
+imported sklearn scripts
+imported scipy sm and math
+imported last modules
