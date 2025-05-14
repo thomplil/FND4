@@ -1,9 +1,6 @@
 function Step1c_dataSave(Subjects)
 %Change how data is saved
 %loop through subjects
-%Run all analyses for 5 subjects, and then delete those subjects and run it for the next five
-%Only keep one subject of data (have 1,2,3,5,10)
-Subjects=[1];
 addpath /projectsn/f_mc1689_1/cpro2_eeg/docs/toolboxes/fieldtrip-20240704;
 addpath /projectsn/f_mc1689_1/baby_actflow/docs/toolboxes/eeglab13_6_5b/;
 ft_defaults;
